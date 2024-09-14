@@ -1,1 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 全ての要素の幅や高さを確実に制御できるようにする（gptアドバイス） */
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6; /* テキストの読みやすさを向上させるための行間（）gptアドバイス */
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4%;
+  }
+
+  header {
+    padding: 20px 0;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+ nav ul li.active {
+    background-color: rgb(52,66,84);
+    color: #fff;
+    padding: 5px 10px;
+ }
+
+  nav ul li {
+    margin: 0 20px; 
+  }
+
+  main {
+    padding: 20px 0;
+    text-align: center;
+  }
+ 
+.main-visual img {
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.introduction {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.introduction p {
+    text-align: left;
+    
+}
+
+.introduction h2 {
+    border-bottom: 2px solid #333;
+    display: inline-block; /* 文字の長さに合わせる（gptアドバイス） */
+}
+
+.profile-images h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #333;
+    display: inline-block; /* 文字の長さに合わせる（gptアドバイス） */
+}
+
+.profile {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    align-items: center; /* 名前とテキストを垂直方向に中央揃えにする （後で消すかも）*/
+}
+
+.profile h4{
+    text-align: left;
+}
+
+.profile img {
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.images {
+    display: flex;
+    justify-content: center; /* 中央に配置（gptアドバイス） */
+    justify-content: space-between; /* 要素の間を均等にスペースを取る（gptアドバイス） */
+    align-items: flex-start; /* 上揃え（gptアドバイス） */
+}
+
+.profile-images .image-item {
+    text-align: center; /* 画像のタイトルや説明を中央揃えに（gptアドバイス） */
+  }
+  
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.image-item {
+    margin: 0 10px; /* 必要に応じてスペースを設定（gptアドバイス） */
+    flex: 1; /* アイテムを均等な幅で配置（gptアドバイス） */
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%; /* 画像がアイテムに収まるように幅を設定 */
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .profile {
+        flex-direction: column; /* 縦に並べる */
+        align-items: center;
+    }
+
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-item {
+        width: 100%;
+    }
+
+    .main-visual img {
+        height: auto; /* スマホ版では高さを自動に */
+    }
+}
 
