@@ -8,10 +8,10 @@
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     color: #333;
-    line-height: 1.6; /* テキストの読みやすさを向上させるための行間（）gptアドバイス */
+    line-height: 1.6; /* テキストの読みやすさを向上させるための行間（gptアドバイス） */
   }
 
-  .container {
+  .wrapper {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 4%;
@@ -35,6 +35,7 @@
 
   nav ul li {
     margin: 0 20px; 
+    white-space: nowrap;/* li内のテキストを改行しない（gptアドバイス） */
   }
 
   main {
@@ -81,7 +82,7 @@
     align-items: center; /* 名前とテキストを垂直方向に中央揃えにする （後で消すかも）*/
 }
 
-.profile h4{
+.profile-left {
     text-align: left;
 }
 
@@ -122,6 +123,11 @@ footer {
     .profile {
         flex-direction: column; /* 縦に並べる */
         align-items: center;
+        justify-content: center;
+    }
+
+    .profile h4 {
+        align-items: center;
     }
 
     .images {
@@ -131,6 +137,7 @@ footer {
     
     .image-item {
         width: 100%;
+        margin-bottom: 50px;
     }
 
     .main-visual img {
@@ -138,3 +145,7 @@ footer {
     }
 }
 
+* {
+    box-sizing: border-box;
+  }
+  
