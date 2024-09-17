@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6; /* テキストの読みやすさを向上させるための行間（gptアドバイス） */
+  }
+
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4%;
+  }
+
+  header {
+    padding: 20px 0;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    margin-left: 350px;
+  }
+
+ nav .active {
+    background-color: rgb(52,66,84);
+    color: #fff;
+    padding: 5px 10px;
+    white-space: nowrap;/* テキストを改行しない（gptアドバイス） */
+    margin-right: 200px; 
+ }
+
+  nav ul li {
+    margin: 0 20px; 
+    white-space: nowrap;/* li内のテキストを改行しない（gptアドバイス） */
+  }
+
+  main {
+    padding: 20px 0;
+    text-align: center;
+  }
+ 
+  .main-visual {
+    margin-top: 0; 
+}
+
+.main-visual img {
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    object-fit: cover; /* 画像を枠にフィットさせて切り取る（gptアドバイス） */
+    object-position: center; /* 画像の中央部分を表示（gptアドバイス） */
+    overflow: hidden; /* 高さを超えた部分を非表示にする（gptアドバイス） */
+    margin-top: 0; /* 上のマージンを取り除く */
+}
+
+.introduction {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.introduction h4 {
+    margin-top: 40px; 
+}
+
+.introduction p {
+    text-align: left;
+    
+}
+
+.introduction h2 {
+    border-bottom: 2px solid #333;
+    display: inline-block; /* 文字の長さに合わせる（gptアドバイス） */
+}
+
+.profile-images h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #333;
+    display: inline-block; /* 文字の長さに合わせる（gptアドバイス） */
+}
+
+.profile {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    align-items: center; /* 名前とテキストを垂直方向に中央揃えにする （後で消すかも）*/
+}
+
+.profile-left {
+    text-align: left;
+}
+
+.profile img {
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.images {
+    display: flex;
+    justify-content: center; /* 中央に配置（gptアドバイス） */
+    justify-content: space-between; /* 要素の間を均等にスペースを取る（gptアドバイス） */
+    align-items: flex-start; /* 上揃え（gptアドバイス） */
+}
+
+.profile-images .image-item {
+    text-align: center; /* 画像のタイトルや説明を中央揃えに（gptアドバイス） */
+  }
+  
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.image-item {
+    margin: 0 10px; /* 必要に応じてスペースを設定（gptアドバイス） */
+    flex: 1; /* アイテムを均等な幅で配置（gptアドバイス） */
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%; /* 画像がアイテムに収まるように幅を設定 */
+    height: auto;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        display: flex; 
+        justify-content: center; 
+    }
+
+    nav .active {
+        margin-right: 0; 
+    }
+
+    nav ul {
+        margin-left: 0; 
+    }
+
+    .profile {
+        flex-direction: column; /* 縦に並べる */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile h4 {
+        align-items: center;
+    }
+
+    .profile-left {
+        text-align: center; /* スマホ版で中央に揃える */
+    }
+
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-item {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .main-visual {
+        width: 100%;
+        height: 600px; /* 表示エリアの高さを調整 */
+        overflow: hidden; /* 画像のオーバーフロー部分を隠す */
+    }
+
+    .main-visual img {
+        height: 100%
+        object-fit: cover; /* 画像を中央部分だけ表示させる */
+        width: 100%;
+        object-position: center;
+    }
+
+   
+}
